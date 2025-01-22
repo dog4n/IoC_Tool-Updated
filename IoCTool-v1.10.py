@@ -5,7 +5,7 @@ import json
 # URLScan class for interacting with the urlscan.io API
 class URLScan:
     def __init__(self):
-        self.apikey = "fbdea673-aa27-4d64-891e-f12287d7b9b0"  # Please enter your own API
+        self.apikey = "xxxxxxxxxxxx"  # Please enter your own API
         self.headers = {'API-Key': self.apikey, 'Content-Type': 'application/json'}
 
     def scan_url(self, url):
@@ -28,7 +28,7 @@ class AbuseIPDB:
 
         headers = {
             'Accept': 'application/json',
-            'Key': '1965b5860ddac5550566add3208bd05dc18768512e92c6cdc4dbe22ede79d394e8d0811c93973ef2'  # Please enter your own API
+            'Key': 'xxxxxxxxxxxxxxxxxxxxxx'  # Please enter your own API
         }
 
         response = requests.request(method='GET', url=url, headers=headers, params=querystring)
@@ -40,7 +40,7 @@ class VirusTotal:
         url = "https://www.virustotal.com/api/v3/files/" + hash
         headers = {
             "accept": "application/json",
-            "x-apikey": "5c2f2c0e4f1a1962f68d33d46784a9d700a105c397c3d067e28ab367dd54f1e5"  # Please enter your own API
+            "x-apikey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # Please enter your own API
         }
         response = requests.get(url, headers=headers)
         return response.json()
@@ -49,7 +49,7 @@ class VirusTotal:
         url = f"https://www.virustotal.com/api/v3/domains/{domain}"
         headers = {
             "accept": "application/json",
-            "x-apikey": "5c2f2c0e4f1a1962f68d33d46784a9d700a105c397c3d067e28ab367dd54f1e5"  # Please enter your own API
+            "x-apikey": "xxxxxxxxxxxxxxxxxxxxxxxxxxx"  # Please enter your own API
         }
         response = requests.get(url, headers=headers)
         return response.json()
